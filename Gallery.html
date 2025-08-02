@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/Seva 2.png" type="image/png" />
+  <title>శ్రీ వైఖనస సేవా సంఘం - తెనాలి</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #e9550e;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .logo-title .logo {
+      width: 80px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      background-color: #1a2d5d;
+      padding: 10px;
+    }
+
+    nav ul li {
+      margin: 5px 15px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #fca311;
+      color: #14213d;
+      border-radius: 4px;
+    }
+
+    main {
+      padding: 30px 20px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      color: #14213d;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #fca311;
+      padding-bottom: 5px;
+    }
+
+    article {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    article img {
+     // width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    article h3 {
+      color: #1a2d5d;
+      margin-bottom: 10px;
+    }
+
+    article p {
+      color: #444;
+    }
+
+    article a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #fca311;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    article a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #e9550e;
+      color: #ffffff;
+      padding: 15px 0;
+    }
+
+    #subfont {
+      font-size: 11px;
+    }
+
+    /* Video gallery grid layout */
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .video-gallery article {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .video-gallery h3 {
+      margin-bottom: 10px;
+      color: #1a2d5d;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    .video-gallery iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 4px;
+    }
+	.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.org-address {
+  text-align: right;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+  </style>
+</head>
+<body>
+  <header>
+  <div class="header-top">
+    <div class="logo-title">
+      <img src="img/Seva 2.png" alt="Logo" class="logo" />
+      <h3>
+        శ్రీ వైఖనస సేవా సంఘం - తెనాలి
+        <sub id="subfont">(రి.నెం. 235/2001)</sub>
+      </h3>
+    </div>
+    <div class="org-address">
+      <p>#6-4-52, Near Jain Temple,</p>
+      <p>Ganganammapet, Tenali,</p>
+      <p>Guntur Dist, Andhra Pradesh - 522201</p>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="Index.html">Home</a></li>
+	  <li><a href="About.html">About Us</a></li>
+      <li><a href="Contant.html">Contant us</a></li>
+	  <li><a href="History.html">History</a></li>
+      <li><a href="#">Gallery</a></li>
+    </ul>
+  </nav>
+</header>
+<audio id="bgAudio" autoplay muted>
+  <source src="audio/OhmNamoNarayanaya.mp3" type="audio/mpeg">
+</audio>
+  <main>
+       <section id="welcome">
+      <h2>Video Gallery</h2>
+      <div class="video-gallery">
+		<article>
+          <h3>Info of vaikhanasam</h3>
+          <iframe src="https://www.youtube.com/embed/mKoHtdeBn2Q?si=EpQI7qjWwOkuHaqe" title="YouTube video player" 
+		  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </article>
+        <article>
+          <h3>శ్రీ విఖనస స్తోత్ర పాఠం</h3>
+          <iframe src="https://www.youtube.com/embed/QYDFwBwlBoI" title="శ్రీ విఖనస స్తోత్ర పాఠం" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </article>
+		<article>
+          <h3>విఖానస జయంతి వేడుకలు </h3>
+          <iframe src="https://www.youtube.com/embed/skVHRQpdPhs?si=f6X33c-MMZc-Q-6m" title="శ్రీ విఖనస స్తోత్ర పాఠం" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </article>
+		<article>
+          <h3>Vikhanasa Vani </h3>
+          <a href="https://www.youtube.com/@vikhanasavani2013">Vikhanasa Vani</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>శ్రీ వైఖనస సేవా సంఘం - తెనాలి <sub id="subfont">(రి.నెం. 235/2001)</p>
+    <p>#6-4-52, Near Jain Temple, Ganganammapet , Tenali, Guntur Dist,Andhra Pradesh - 522201,</p>
+  </footer>
+</body>
+</html>

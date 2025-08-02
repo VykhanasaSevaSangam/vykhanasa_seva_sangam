@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline - వైఖానస సేవా సంఘం</title>
+  <link rel="icon" href="img/Seva 2.png" type="image/png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #e9550e;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-title .logo {
+      width: 80px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .org-address {
+      text-align: right;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      background-color: #1a2d5d;
+      padding: 10px;
+    }
+
+    nav ul li {
+      margin: 5px 15px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #fca311;
+      color: #14213d;
+      border-radius: 4px;
+    }
+
+    main {
+      padding: 40px 20px;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    h2 {
+      color: #14213d;
+      border-bottom: 2px solid #fca311;
+      margin-bottom: 30px;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: left;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      background-color: #1a2d5d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-button.active {
+      background-color: #fca311;
+      color: #14213d;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .timeline-container {
+      position: relative;
+      padding: 40px 0;
+    }
+
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #fca311;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-item {
+      padding: 20px 30px;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-item .timeline-content {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item.left {
+      left: 0;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background-color: #14213d;
+      border: 4px solid #fca311;
+      border-radius: 50%;
+      z-index: 1;
+    }
+footer {
+      text-align: center;
+      background-color: #e9550e;
+      color: #ffffff;
+      padding: 15px 0;
+    }
+    .timeline-item.left::before {
+      right: -10px;
+    }
+
+    .timeline-item.right::before {
+      left: -10px;
+    }
+
+    .timeline-content h3 {
+      color: #fca311;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 50px;
+        margin-bottom: 40px;
+      }
+
+      .timeline-container::after {
+        left: 30px;
+      }
+
+      .timeline-item::before {
+        left: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo-title">
+        <img src="img/Seva 2.png" alt="Logo" class="logo" />
+        <h3>శ్రీ వైఖనస సేవా సంఘం - తెనాలి <sub>(రి.నెం. 235/2001)</sub></h3>
+      </div>
+      <div class="org-address">
+        <p>#6-4-52, Near Jain Temple,</p>
+        <p>Ganganammapet, Tenali,</p>
+        <p>Guntur Dist, Andhra Pradesh - 522201</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Contant.html">Contact Us</a></li>
+        <li><a href="History.html">History</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>History</h2>
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('seva')">సేవా సంఘం</button>
+    <button class="tab-button" onclick="showTab('uva')">UVA</button>
+  </div>
+
+  <div id="seva" class="tab-content active">
+    <div class="timeline-container">
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>1955</h3>
+          <p>వైఖానస సంఘం పేరున సంస్థ స్థాపన</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2001</h3>
+          <p> 'వైఖానస సేవా సంఘం' రిజిష్టర్డు (రి.నెం.235/2000) సంస్థగా మారడం</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>2011</h3>
+          <p> స్వర్ణోత్సవ సంవత్సరం</p>
+        </div>
+      </div>
+	  <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2011</h3>
+          <p>  'యువ' వైఖానస అసోసియేట్స్ స్థాపన</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="uva" class="tab-content">
+   <div class="timeline-container">
+  <div class="timeline-item right">
+    <div class="timeline-content">
+      <h3>13 Oct 2024</h3>
+      <p>విజయదశమి రోజున 'యువ వైఖానస అసోసియేట్స్' స్థాపన లోగో బ్యానర్లతో పాటు కార్యవర్గాన్ని ఎన్నుకునే ప్రక్రియ మొదలు.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item left">
+    <div class="timeline-content">
+      <h3>Oct 2024</h3>
+      <p>విద్య ఉద్యోగ సంబంధిత చర్చ కోసం, సాంస్కృతిక చైతన్యం కోసం 'శ్రీ వైఖానస సేవా సంఘం - యువ విభాగ్ - తెనాలి' WhatsApp గ్రూప్ స్థాపించబడింది. ప్రస్తుతం 160 మంది సభ్యులతో నడుస్తున్నది.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item right">
+    <div class="timeline-content">
+      <h3>25 Nov 2024</h3>
+      <p>వైఖానస కార్తీక వనసమారాధన సందర్భంగా కార్యవర్గ ఎన్నిక, 'యువ' ఆధ్వర్యాన సినీ నటులు డా. అగ్నిహోత్రం మురళీకృష్ణ గారికి సత్కార కార్యక్రమం.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item left">
+    <div class="timeline-content">
+      <h3>01 Jan 2025</h3>
+      <p>'యువ' నిధుల ద్వారా 2025 సంవత్సర టీ.టీ.డీ క్యాలెండర్లు అందచేయడమైనది — మొదటి ప్రచార ప్రయత్నంగా.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item right">
+    <div class="timeline-content">
+      <h3>12 Jan 2025</h3>
+      <p>వివేకానందుని జయంతి సందర్భంగా 'యువజన దినోత్సవం' తెనాలి వేణుగోపాల స్వామి దేవాలయంలో నిర్వహించబడింది. విఖనస మహర్షి చిత్రపటాన్ని ఆలయానికి బహూకరించటం జరిగింది.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item left">
+    <div class="timeline-content">
+      <h3>5 Feb 2025</h3>
+      <p>'యువ అసోసియేట్స్ - తెనాలి' Facebook పేజీ ప్రారంభించబడింది — మీడియా ద్వారా చేరువ అవ్వడం కోసం.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item right">
+    <div class="timeline-content">
+      <h3>8 Mar 2025</h3>
+      <p>మహిళా దినోత్సవ సందర్భంగా 'Uvam' యువ మహిళా విభాగం ద్వారా మొదటి online meeting నిర్వహించబడింది.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item left">
+    <div class="timeline-content">
+      <h3>Mar 2025</h3>
+      <p>ఉగాది సందర్భంగా 'వైఖానస ప్రజ్ఞ' online quiz మరియు 'వైఖానస రసజ్ఞ' కవితల పోటీలకు మంచి స్పందన. గెలుపొందిన యువకులకు బహుమతులు అందించబడినవి.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item right">
+    <div class="timeline-content">
+      <h3>30 Mar 2025</h3>
+      <p>20 మంది యువకులు, పిల్లలు online 'ఇష్టాగోష్ఠి' ద్వారా పరిచయం చేసుకున్నారు.  
+      <br><a href="https://www.facebook.com/share/p/16dSqGbqAq/" target="_blank">Facebook Link</a></p>
+    </div>
+  </div>
+
+  <div class="timeline-item left">
+    <div class="timeline-content">
+      <h3>30 Mar 2025</h3>
+      <p>తెనాలి గోవర్ధన స్వామి ఆలయంలో పంచాంగ శ్రవణం కార్యక్రమాన్ని online ద్వారా అందుబాటులోకి తీసుకువచ్చారు.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item right">
+    <div class="timeline-content">
+      <h3>2 Apr 2025</h3>
+      <p>శ్రీరామనవమి సందర్భంగా 'శ్రీ రామ కళార్చన' కార్యక్రమం YouTube ద్వారా అందుబాటులో ఉంది.  
+      <br><a href="https://youtu.be/-n07K1nzLdQ?si=3NbjYG6XzoXj3vE-" target="_blank">Watch on YouTube</a></p>
+    </div>
+  </div>
+
+  <div class="timeline-item left">
+    <div class="timeline-content">
+      <h3>July 2025</h3>
+      <p>వ్యాస పౌర్ణమి సందర్భంగా అవగాహన పెంచేలా యువ గ్రూపులో online quiz నిర్వహించబడింది.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+  </main>
+
+  <footer>
+    <p>శ్రీ వైఖనస సేవా సంఘం - తెనాలి <sub id="subfont">(రి.నెం. 235/2001)</sub></p>
+    <p>#6-4-52, Near Jain Temple, Ganganammapet, Tenali, Guntur Dist, Andhra Pradesh - 522201</p>
+  </footer>
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

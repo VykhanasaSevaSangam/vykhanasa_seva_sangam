@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="img/Seva 2.png" type="image/png" />
+  <title>About Us - శ్రీ వైఖనస సేవా సంఘం - తెనాలి</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #e9550e;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-title .logo {
+      width: 80px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .org-address {
+      text-align: right;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      background-color: #1a2d5d;
+      padding: 10px;
+    }
+
+    nav ul li {
+      margin: 5px 15px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #fca311;
+      color: #14213d;
+      border-radius: 4px;
+    }
+
+    main {
+      padding: 40px 20px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #14213d;
+      border-bottom: 2px solid #fca311;
+      margin-bottom: 30px;
+      padding-bottom: 5px;
+    }
+
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e9ecef;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: #14213d;
+  border-radius: 12px 12px 0 0; /* Top rounded corners */
+  margin-right: 10px; /* Space between tabs */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: #fca311;
+  color: white;
+}
+
+.tab-button:hover {
+  background-color: #fca311;
+}
+
+    .tab-content {
+      display: none;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 1.05em;
+      line-height: 1.8;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #e9550e;
+      color: #ffffff;
+      padding: 15px 0;
+    }
+
+    #subfont {
+      font-size: 11px;
+    }
+	.accordion {
+  margin-top: 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  background-color: #fca311;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.accordion-button:hover {
+  background-color: #e68a00;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+.inner-tabs {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.inner-tab-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+  color: #14213d;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inner-tab-button.active {
+  background-color: #fca311;
+  color: white;
+}
+
+.inner-tab-button:hover {
+  background-color: #fca311;
+  color: white;
+}
+
+.inner-tab-content {
+  display: none;
+}
+
+.inner-tab-content.active {
+  display: block;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.member-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.member-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.member-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.member-location {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo-title">
+        <img src="img/Seva 2.png" alt="Logo" class="logo" />
+        <h3>శ్రీ వైఖనస సేవా సంఘం - తెనాలి <sub id="subfont">(రి.నెం. 235/2001)</sub></h3>
+      </div>
+      <div class="org-address">
+        <p>#6-4-52, Near Jain Temple,</p>
+        <p>Ganganammapet, Tenali,</p>
+        <p>Guntur Dist, Andhra Pradesh - 522201</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Contant.html">Contact Us</a></li>
+		<li><a href="History.html">History</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>సంఘం సమాచారం (Organization Info)</h2>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('sangam')">సేవా సంఘం</button>
+      <button class="tab-button" onclick="showTab('yuva')"> UVA విభాగం</button>
+	  <button class="tab-button" onclick="showTab('mem')"> సంఘ కార్యవర్గ సభ్యులు</button>
+    </div>
+
+    <div id="sangam" class="tab-content active">
+      <p>షుమారు 70 సం||రాల క్రితం విఖనస మహర్షి ఆశీస్సులతో తెనాలి తాలూక వైఖానస సంఘం పేరుతో తెనాలి ప్రాంత వైఖానసులచే స్థాపించబడి 2001వ సంవత్సరములో "వైఖానస సేవా సంఘం" గా (రి.నెం.235/2000) రిజిష్టరు కాబడి తెనాలి ప్రాంతములో వైఖానస సోదరుల ఆదారాభిమానాలు పొందుతున్నది వైఖానస సేవాసంఘం.</p>
+
+      <p>స్వయంగా శ్రీమహావిష్ణు సేవకొరకే సృజించబడిన మన వైఖానస సంఘ పరిపుష్టికి, వైఖానస సమాజ శ్రేయస్సుకోసం, మన సంస్కృతీ సంప్రదాయాలను పరిరక్షించుకుంటూ సమాజంలో వైఖానసులకు ఒక విశిష్టమైన గుర్తింపు తీసుకువచ్చే దిశగా తెనాలి వైఖానస సంఘం సర్వదా కృషి చేస్తున్నది.</p>
+
+      <p>తెనాలి ప్రాంత వైఖానసుల సహాయ సహకారములతో పలు సేవా కార్యక్రమములతో పాటు విఖనస జయంతి, కార్తీక వనసమారాధన, అర్చక పరీక్షలకు శిక్షణ తదితర కార్యక్రమాలను నిర్వహిస్తూ ప్రస్తుతం షుమారు 100 మంది జీవిత సభ్యుల బలముతో 'సంఘే శక్తి: కలౌయుగే' అనే సంఘ నినాదానికి మరింత బలాన్ని ఇస్తూ ఈ సంస్థ పరిఢవిల్లుతున్నది.</p>
+
+      <p>స్వధర్మ పరిరక్షణతో పాట సనాతన ధర్మ పరిరక్షణ కొరకు మన తెనాలి వైఖానస సేవా సంఘం నిరంతరం పాటుపడుతుంది.</p>
+    </div>
+
+    <div id="yuva" class="tab-content">
+      <h3>యువ వైఖానస అసోసియేట్స్ (UVA)</h3>
+      <p>సాంప్రదాయక, లౌకిక వృత్తులు, ఉన్నత విద్య, వైదిక విద్య తదితర వ్యాపకాలలో ఉన్నటువంటి వైఖానస యువతీ యువకులు వైఖానస సేవా సంఘం యొక్క స్ఫూర్తిని, కార్యక్రమాలను యువతకు మరింత చేరువచేసే ఆశయంతో  తెనాలి వైఖానస సేవా సంఘం (రి.నెం.235/2000) అనుబంధ సంస్థగా క్రోధినామ సంవత్సర విజయదశమి (13.Oct.2025) నాడు వైఖానస సంఘ పెద్దలచే 'యువ వైఖానస అసోసియేట్స్ UVA' స్థాపించబడడమైనది.
+
+		<br/> మాతృ సంస్థకు సహాయకంగా నిలుస్తూ పాత తరానికి కొత్త తరానికి వారధిగా నిలచి యువకులలో వైఖానస సంస్కృతి సంప్రదాయాలను పెంపొందిచి తర్వాతి తరాన్ని సంఘ పరిరక్షణకు సన్నద్ధం చేయటం యువత అన్ని విధాలుగా తమ సమాజానికి సహాయ సహకారాలు అందించే బాధ్యత తో   <b>'To Protect and Promote Vykhanasam'</b> అనే నినాదంతో యువ వైఖానస అసోసియేట్స్ ముందడుగు వేస్తున్నది.</p>
+      <h3>ఆశయాలు (Guidelines)</h3>
+<div class="accordion">
+  <div class="accordion-item">
+    <button class="accordion-button">
+  <i class="fas fa-users"></i> యువ వైఖానస ప్రొఫెషనల్స్‌ను (UVA) సంఘ సేవలో మిళితం చేయడం
+</button>
+    <div class="accordion-content">
+      <p>వైఖానస సేవా సంఘం (రి.నెం.235/2001) కు అనుబంధంగా యువ వైఖానస ప్రొఫెషనల్స్‌ను సంఘ ఆశయాలను అభివృద్ధి చేయడంలో భాగస్వామ్యం చేయడం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button">
+  <i class="fas fa-bullhorn"></i> వైఖానస ఆగమ విశేషత ప్రచారం
+</button>
+    <div class="accordion-content">
+      <p>రాబోయే తరాలకు వైఖానస ఆగమ విశేషతను తెలియజేసే కార్యక్రమాలు నిర్వహించడం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+<button class="accordion-button">
+  <i class="fas fa-handshake"></i>  పరస్పర సహకారం
+</button>
+    <div class="accordion-content">
+      <p>ఉద్యోగ, వైద్య, వ్యాపార రంగాలలో స్వశాఖీయులు ఒకరికి ఒకరు సహకరించుకోవడం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button">
+  <i class="fas fa-hand-holding-heart"></i> ఆర్థిక సహాయం
+</button>
+    <div class="accordion-content">
+      <p>పేద వైఖానసులకు, ప్రకృతి వైపరీత్యాలు సంభవించినప్పుడు, అంగవైకల్యమునకు గురైన వారికి ఆర్థిక సహాయం అందించడం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button">
+  <i class="fas fa-graduation-cap"></i> విద్యాభివృద్ధి
+</button>
+    <div class="accordion-content">
+      <p>పేద విద్యార్థుల విద్యాభివృద్ధికి మరియు ఉద్యోగ అవకాశాలు కల్పించేందుకు సహకారం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+   <button class="accordion-button">
+  <i class="fas fa-users-line"></i> పరిచయ కార్యక్రమాలు
+</button>
+    <div class="accordion-content">
+      <p>విఖనస జయంతి, కార్తీక మాస సమారాధన సందర్భాలలో స్వశాఖీయులందరూ సమావేశమై పరిచయ కార్యక్రమాలు నిర్వహించడం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+ <button class="accordion-button">
+  <i class="fas fa-book"></i> పుస్తక ప్రచురణకు చేయూత
+</button>
+    <div class="accordion-content">
+      <p>వైఖానస ఆగమ విజ్ఞానం కోసం ప్రచురించే పుస్తకాలకు చేయూత ఇవ్వడం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+  <button class="accordion-button">
+  <i class="fas fa-user-graduate"></i> యువత ప్రోత్సాహం
+</button>
+    <div class="accordion-content">
+      <p>ఆగమము నేర్చుకున్న యువతను ప్రోత్సహించడం మరియు వారి అభివృద్ధికి సహకరించడం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button">
+  <i class="fas fa-heart"></i> వివాహ ప్రేరణ
+</button>
+    <div class="accordion-content">
+      <p>ఆగమం చదివిన విద్యార్థుల వివాహ విషయముపై తల్లిదండ్రులకు ప్రేరణ కలిగించడం.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button">
+  <i class="fas fa-globe"></i> డిజిటల్ వేదికలు
+</button>
+    <div class="accordion-content">
+      <p>వెబ్సైట్ మరియు వాట్సప్ గ్రూపులు ఏర్పాటు చేయడం ద్వారా యువ వైఖానసుల మధ్య అనుసంధానం పెంపొందించడం.</p>
+    </div>
+  </div>
+</div>
+    </div>
+	
+	<div id="mem" class="tab-content">
+	సభ్యులు Photos
+	<div class="inner-tabs">
+    <button class="inner-tab-button active" onclick="showInnerTab('seva')">సేవా సంఘం</button>
+    <button class="inner-tab-button" onclick="showInnerTab('uva')">UVA</button>
+	</div>
+	<div id="seva" class="inner-tab-content active">
+    <div class="members-grid">
+      <div class="member-card">
+        <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">శ్రీనివాస్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+       <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">రామకృష్ణ</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	  <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">రామకృష్ణ</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	  <div class="member-card">
+        <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">శ్రీనివాస్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+       <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">రామకృష్ణ</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	  <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">రామకృష్ణ</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	  <div class="member-card">
+        <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">శ్రీనివాస్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+       <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">రామకృష్ణ</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	  <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">రామకృష్ణ</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	  <div class="member-card">
+        <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">శ్రీనివాస్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+       <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">రామకృష్ణ</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	  <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">రామకృష్ణ</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+    </div>
+  </div>
+   <div id="uva" class="inner-tab-content">
+    <div class="members-grid">
+      <div class="member-card">
+      <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">వినోద్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">చక్రవర్తి</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	   <div class="member-card">
+      <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">వినోద్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">చక్రవర్తి</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	   <div class="member-card">
+      <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">వినోద్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">చక్రవర్తి</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	   <div class="member-card">
+      <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">వినోద్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">చక్రవర్తి</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+	   <div class="member-card">
+      <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">వినోద్</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+      <div class="member-card">
+    <img src="img\usericon.png" alt="Member Icon">
+        <div class="member-name">చక్రవర్తి</div>
+        <div class="member-location">తెనాలి</div>
+      </div>
+    </div>
+  </div>
+	
+	</div>
+  </main>
+
+  <footer>
+    <p>శ్రీ వైఖనస సేవా సంఘం - తెనాలి <sub id="subfont">(రి.నెం. 235/2001)</sub></p>
+    <p>#6-4-52, Near Jain Temple, Ganganammapet, Tenali, Guntur Dist, Andhra Pradesh - 522201</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+	function showInnerTab(tabId) {
+    const innerTabs = document.querySelectorAll('.inner-tab-content');
+    const buttons = document.querySelectorAll('.inner-tab-button');
+    innerTabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+	// Accordion functionality
+  document.addEventListener("DOMContentLoaded", function () {
+    const accButtons = document.querySelectorAll(".accordion-button");
+    accButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  });
+  </script>
+</body>
+</html>
